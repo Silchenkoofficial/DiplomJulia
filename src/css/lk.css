@@ -1,0 +1,117 @@
+.lk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--secondary-light);
+}
+.lk .lk__wrapper {
+    width: 75%;
+    background-color: #fff;
+    padding: 40px 40px 20px;
+    border-radius: 10px;
+}
+.lk h1 {
+    color: #000;
+    margin-bottom: 60px;
+}
+
+.lk .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lk .info__field {
+    margin-bottom: 25px;
+}
+.lk .info__field .info__label {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 5px;
+}
+.lk .info__field .info__text {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lk .info p {
+    color: #000;
+}
+
+.lk .tabs {
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    /* justify-content: center; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.lk .tabs .tab {
+    /* position: relative; */
+    color: rgba(0, 0, 0, 0.4);
+    font-family: "Comfortaa", sans-serif;
+    padding: 0 30px 10px;
+    transition: all 0.2s;
+}
+.lk .tabs .tab.active {
+    color: var(--primary-color);
+}
+.lk .tabs .tab.active::after {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-color);
+}
+
+.lk .tab__content {
+    width: 100%;
+    max-height: 240px;
+    padding: 40px 15px 0;
+    color: #000;
+    overflow-y: scroll;
+}
+.lk .tab__content table {
+    width: 100%;
+}
+.lk .tab__content table th {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.lk .tab__content table th,
+.lk .tab__content table td {
+    text-align: left;
+    padding: 10px;
+}
+.lk .tab__content table td {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.lk .tab__content .tab__content--1 {
+    display: block;
+}
+.lk .tab__content .tab__content--2 {
+    display: none;
+}
+
+.lk .tab__content .tab__content--2 .test {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lk .tab__content .tab__content--2 .test .test__name {
+    width: 100%;
+}
+.lk .tab__content .tab__content--2 .test .main-btn {
+    width: 20%;
+}
+
+.lk .info .column .main-btn {
+    border: 1px solid var(--primary-color);
+    background-color: #fff;
+    color: var(--primary-color);
+}

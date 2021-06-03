@@ -1,0 +1,139 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.1111rem 0 0;
+    background-color: #fff;
+    box-shadow: 0 3px 5px #1c570581;
+}
+
+.header .burger--wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80px;
+    height: 80px;
+    border-right: 1px solid rgba(2, 2, 2, 0.103);
+    cursor: pointer;
+}
+.header .burger {
+    position: relative;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .burger span {
+    position: relative;
+    width: 100%;
+    padding: 2px;
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+    transition: all 0.2s;
+}
+.header .burger span::after,
+.header .burger span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50px;
+}
+.header .burger span::after {
+    top: -10px;
+}
+.header .burger span::before {
+    bottom: -10px;
+}
+
+.header .burger.active span {
+    position: relative;
+    width: 100%;
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 50px;
+    transform: rotate(45deg);
+    transition: all 0.2s;
+}
+.header .burger.active span::after,
+.header .burger.active span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50px;
+}
+.header .burger.active span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+.header .burger.active span::before {
+    display: none;
+}
+
+
+.header .logo {
+    flex: 1;
+    margin-left: 30px;
+    font-size: 2em;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: bold;
+    color: #1c5705;
+}
+
+.header .login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header .login .profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header .login .profile p {
+    margin-right: 5px;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.header .login .profile:hover .profile__dropdown {
+    opacity: 1;
+    transform: translateX(0);
+}
+.header .login .profile .profile__dropdown {
+    opacity: 0;
+    transform: translateX(100%);
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: -150px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px #8a8a8a;
+    transition: all 0.2s;
+}
+.header .login .profile .profile__dropdown a {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.header .login .profile .profile__dropdown a:last-child {
+    margin-bottom: 0;
+}
+.header .login .profile .profile__dropdown a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
